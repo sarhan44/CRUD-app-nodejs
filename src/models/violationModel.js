@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// create a new Schema object
+// create a new Violation Schema object
 const violationSchema = new mongoose.Schema({
     licensePlateNumber: { type: String, required: true },
 

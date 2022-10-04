@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// Vehicle Schema
 const vehicleSchema = new mongoose.Schema({
     licensePlateNumber: { type: String,unique:true, required: true },
 

@@ -1,14 +1,16 @@
 const violationModel = require('../models/violationModel')
 
+//enum values validation function
 const isvalidStatus = function (status) {
     return ['paid', 'unpaid'].indexOf(status) === -1
 }
 
 // ===========[ New Violation ]=============
+
 const newViolation = async (req, res) => {
     try {
         let data = req.body
-
+        //destructure data
         let { licensePlateNumber, violationType, status, date, time, location, videoUrl} = data
 
         //==[ Required fields ]====
@@ -121,7 +123,7 @@ const deleteViolationData = async (req, res) => {
 }
 
 
-//====( Exports )
+//====( Exports )========
 module.exports.newViolation = newViolation
 module.exports.getAllData = getAllData
 module.exports.getViolationData = getViolationData

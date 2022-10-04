@@ -9,6 +9,7 @@ const isvalidStatus = function (rc_status) {
 }
 
 // ===========[ Create Vehicle Data ]===========
+
 const createVehicle = async (req, res) => {
     try {
         let data = req.body
@@ -68,6 +69,7 @@ const getAllData = async (req, res) => {
         return res.status(500).send({ message: err.message });
     }
 }
+
 // ===========[ Get Vehicle Data by Id ]===========
 
 const getVehicleData = async (req, res) => {
@@ -88,6 +90,7 @@ const getVehicleData = async (req, res) => {
         return res.status(500).send({ message: err.message });
     }
 }
+
 // ===========[ Update Vehicle Data by Id ]===========
 
 const updateVehicleData = async (req, res) => {
@@ -109,6 +112,7 @@ const updateVehicleData = async (req, res) => {
         return res.status(500).send({ message: err.message });
     }
 }
+
 // ===========[ Delete Vehicle Data by Id ]===========
 
 const deleteVehicleData = async (req, res) => {
@@ -132,7 +136,7 @@ const deleteVehicleData = async (req, res) => {
 
 
 
-//=====[ exports ]=====
+//=====( exports )=====
 module.exports.createVehicle = createVehicle
 module.exports.getAllData = getAllData
 module.exports.getVehicleData = getVehicleData
